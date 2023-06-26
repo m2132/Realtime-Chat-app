@@ -2,8 +2,7 @@
 
 This is a real-time chat website that allows users to connect with each other and chat in real-time. It was built using the MERN stack (MongoDB, Express.js, React.js, and Node.js), Socket.io, Redux Toolkit, and Tailwind CSS. 
 
-- If you liked it then give this Repository a Star⭐
-- Youtube Demo : <a target="__blanck" href="https://youtu.be/11oZj2jBhOE">Click On Me</a>
+
 
 ## Technologies Used
 
@@ -32,7 +31,7 @@ In order to run this project locally, simply fork and clone the repository or do
 - Split your terminal into two (run the client on one terminal and the server on the other terminal)
 
 In the first terminal
-- cd client and create a .env file in the root of your client directory.
+- cd frontend and create a .env file in the root of your client directory.
 - Supply the following credentials
 
 ```
@@ -40,16 +39,9 @@ REACT_APP_GOOGLE_CLIENT_ID =
 REACT_APP_SERVER_URL='http://localhost:8000'
 ```
 
-To get your Google ClientID for authentication, go to the [credential Page ](https://console.cloud.google.com/apis/credentials) (if you are new, then [create a new project first](https://console.cloud.google.com/projectcreate) and follow the following steps;
-
-- Click Create credentials > OAuth client ID.
-- Select the Web application type.
-- Name your OAuth client and click Create
-- Remember to provide your domain and redirect URL so that Google identifies the origin domain to which it can display the consent screen. In development, that is going to be `http://localhost:3000` and `http://localhost:3000/login`
-- Copy the Client ID and assign it to the variable `REACT_APP_GOOGLE_CLIENT_ID` in your .env file
 
 ```
-$ cd client
+$ cd frontend
 $ npm install (to install client-side dependencies)
 $ npm start (to start the client)
 ```
@@ -65,19 +57,8 @@ CLIENT_ID=
 BASE_URL="http://localhost:3000"
 ```
 ```
-$ cd server
+$ cd backend
 $ npm install (to install server-side dependencies)
 & npm start (to start the server)
 ```
-
-
-## Contributing
-
-Contributions to this project are welcome! If you find a bug or want to add a feature, please submit an issue or a pull request. To contribute, follow these steps:
-
-1. Fork the repository
-2. Create a new branch for your feature: `git checkout -b my-new-feature`
-3. Make changes and commit them: `git commit -m 'Add some feature'`
-4. Push your branch to your forked repository: `git push origin my-new-feature`
-5. Create a Pull Request
 
