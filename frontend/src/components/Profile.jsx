@@ -18,7 +18,7 @@ function Profile(props) {
   const logoutUser = () => {
     toast.success("Logout Successfull!")
     localStorage.removeItem("userToken")
-    window.location.href = "/login"
+    window.location.href = "/"
   }
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
