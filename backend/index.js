@@ -9,6 +9,7 @@ import chatRoutes from './routes/chat.js';
 import messageRoutes from './routes/message.js';
 import * as Server from 'socket.io';
 
+// dotenv.config();
 const app = express();  
 const corsConfig = {
   // "origin": "*",
@@ -27,10 +28,13 @@ app.use('/', userRoutes);
 app.use('/api/chat', chatRoutes);
 app.use('/api/message', messageRoutes);
 mongoose.set('strictQuery', false);
+
 mongoDBConnect();
 const server = app.listen(process.env.PORT, () => {
   console.log(`Server Listening at PORT -  http://localhost:${process.env.PORT}`);
 });
+
+//socket
 const io = new Server.Server(server, {
   pingTimeout: 60000,
   cors: {
