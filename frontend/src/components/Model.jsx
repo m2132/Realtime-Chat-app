@@ -96,7 +96,7 @@ function Model(props) {
 
 
       <button onClick={handleOpen}>
-        <img className='w-[40px] h-[40px] rounded-[25px]' alt="Profile Pic" src={getChatPhoto(activeChat, activeUser)} />
+        <img className='w-[40px] h-[40px] rounded-[25px]' /*alt="Profile Pic"*/ src={getChatPhoto(activeChat, activeUser)} />
 
       </button>
       {
@@ -163,10 +163,6 @@ function Model(props) {
             </Box>
           </Modal>
       }
-
-
-
-
     </>
   )
 }

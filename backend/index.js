@@ -12,17 +12,17 @@ import * as Server from 'socket.io';
 // dotenv.config();
 const app = express();  
 const corsConfig = {
-  // "origin": "*",
+  origin: process.env.BASE_URL,
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   preflightContinue: false,
   optionsSuccessStatus: 204,
-  origin: process.env.BASE_URL,
   credentials: true,
-}; 
+};
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+// app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors(corsConfig));
+
 
 app.use('/', userRoutes);
 app.use('/api/chat', chatRoutes);

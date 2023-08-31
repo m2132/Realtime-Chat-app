@@ -59,7 +59,7 @@ function Home() {
         name: data?.user?.name
       }
       dispatch(setActiveUser(user))
-    }
+    } 
     isValid()
 
   }, [dispatch, activeUser])

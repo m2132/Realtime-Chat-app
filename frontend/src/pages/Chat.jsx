@@ -14,6 +14,9 @@ import Picker from '@emoji-mart/react'
 import { getChatName } from '../utils/logics';
 import Typing from '../components/ui/Typing';
 import { validUser } from '../apis/auth';
+import { useNavigate } from "react-router-dom"
+import Camera from '../components/Camera'
+import { red } from '@mui/material/colors';
 const ENDPOINT = process.env.REACT_APP_SERVER_URL
 let socket, selectedChatCompare;
 
@@ -82,6 +85,12 @@ function Chat(props) {
       dispatch(fetchChats())
     })
   })
+  const navigate = useNavigate()
+
+  const camera=()=>{
+    console.log('click');
+    navigate("/camera")
+   }
   useEffect(() => {
     const isValid = async () => {
       const data = await validUser()
@@ -111,6 +120,10 @@ function Chat(props) {
               </div>
               <div>
                 <Model />
+                {/* <button></button> */}
+
+
+           
               </div>
             </div>
             <div className='scrollbar-hide w-[100%] h-[70vh] md:h-[66vh] lg:h-[69vh] flex flex-col overflow-y-scroll p-4'>
@@ -151,6 +164,14 @@ function Chat(props) {
                 </form>
 
               </div>
+              {/* 99999999999999999999999999999999999999999999999999999999999999999 */}
+              <div>
+        {/* <button style="background-image: url('.././assets/Camera.png')"onClick={camera}>camera</button> */}
+        <button style={{ backgroundImage: "url('../assets/Camera.png')" ,color:red}} onClick={camera}>
+        <img className='w-[50px] h-[50px] rounded-[25px]'  src={'../assets/Camera.jpeg'} />
+        </button>
+
+        </div>
 
               <div className='border-x-[1px] border-b-[1px] bg-[#f8f9fa] border-[#aabac8] px-6 py-3 w-[360px] sm:w-[400px] md:w-[350px] lg:w-[400px] rounded-b-[10px] h-[50px]'>
                 {/* {
